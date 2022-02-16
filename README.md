@@ -1,4 +1,4 @@
-![alt text](https://github.com/wizzypro/KeeperApp-final/blob/main/preview.jpg?raw=true)
+![alt text](https://github.com/wizzypro/KeeperApp-final/blob/main/preview.png?raw=true)
 
 # Getting Started with Create React App
 
