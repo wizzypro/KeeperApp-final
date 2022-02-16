@@ -1,9 +1,13 @@
 import React from "react";
+import NotesIcon from "@mui/icons-material/Notes";
 
 let Header = () => {
   return (
     <header>
-      <h1>Keeper</h1>
+      <h1>
+        <NotesIcon />
+        Keeper
+      </h1>
     </header>
   );
 };

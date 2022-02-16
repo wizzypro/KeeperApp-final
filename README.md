@@ -1,3 +1,5 @@
+![alt text](https://github.com/wizzypro/KeeperApp-final/blob/main/preview.jpg?raw=true)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
