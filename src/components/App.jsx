@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Note from "../components/body/Note";
 import CreateArea from "./body/CreateArea";
+import axios from "axios";
+import Login from "./login/Login";
 
 function App() {
   const [noteArray, setNoteArray] = useState([]);
+  const [isloggedIn, setIsloggedIn] = useState(false);
+  const [data, setData] = useState(null);
 
   function addNoteHandler(item) {
     setNoteArray((prevValue) => {
@@ -20,10 +24,25 @@ function App() {
       });
     });
   }
+  useEffect(() => {
+    axios
+      .get("/api")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((error) => {
+        console.log(error.data);
+      });
+  }, []);
+
   return (
     <div>
-      <Header />
-      <CreateArea add={addNoteHandler} />
+      <Header user={isloggedIn} />
+      <CreateArea
+        add={addNoteHandler}
+        style={{ display: !isloggedIn && "none" }}
+      />
+      <Login style={{ display: isloggedIn && "none" }} />
       {noteArray.map((note, i) => (
         <Note
           key={i}
@@ -33,7 +52,6 @@ function App() {
           delete={deleteHandler}
         />
       ))}
-
       <Footer />
     </div>
   );

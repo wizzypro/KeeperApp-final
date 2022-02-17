@@ -8,21 +8,33 @@ html {
 }
 body {
   background: #eee;
-  padding: 0 16px;
+  padding: 0px;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
 header {
   background-color: #f5ba13;
-  margin: auto -16px;
-  padding: 16px 32px;
+  margin: auto 0px;
+  padding: 16px 0px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header > div {
+  padding: 0 32px;
+  display: flex;
+}
+
+header > div > a {
+  color: #fff;
+  margin: auto 0;
+  cursor: pointer;
 }
 
 header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
+  margin-right: auto;
 }
 
 footer {
@@ -100,4 +112,19 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+.login-block {
+  margin: 50px auto;
+  text-align: center;
+}
+.login-block h1 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+.card-grp {
+  margin: 50px auto;
+  text-align: center;
+}
+.card-grp .btn {
+  color: white !important;
 }

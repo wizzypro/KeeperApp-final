@@ -46,7 +46,7 @@ function CreateArea(props) {
     }
   }
   return (
-    <div>
+    <div style={props.style}>
       <form className="create-note">
         <input
           name="title"
